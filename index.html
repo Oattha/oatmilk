@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dutchmill Vending Machine</title>
+    <!-- Import Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="logo.png" alt="OTP Milk">
+        <input type="text" placeholder="ค้นหาสินค้า...">
+        <a href="cart.html"><i class="fas fa-shopping-cart"></i> ตะกร้าสินค้า</a>
+    </div>
+
+    <div class="sale-banner">
+        <h2>นมดัชมิล โปรโมชั่นพิเศษ!</h2>
+        <p>หมดเขตใน: <span id="countdown">07:49:35</span></p>
+    </div>
+
+    <div class="machine-status">
+        <p><strong>สถานะเครื่อง:</strong> พร้อมทำงาน (Rule 1)</p>
+        <p><strong>คำแนะนำ:</strong> กรุณาเลือกสินค้าของคุณ</p>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="dutchmill_strawberry.jpg" alt="Dutchmill Strawberry">
+            <p>นมดัชมิล รสสตรอเบอร์รี่ (เตรียมนม)</p>
+            <p class="price">฿15.00</p>
+            <button class="add-to-cart" onclick="addToCart('นมดัชมิล รสสตรอเบอร์รี่', 15, 'dutchmill_strawberry.jpg')">
+                <i class="fas fa-cart-plus"></i> เพิ่มลงตะกร้า
+            </button>
+        </div>
+        <div class="product-card sold-out">
+            <img src="dutchmill_yogurt.jpg" alt="Dutchmill Yogurt">
+            <p>นมดัชมิล โยเกิร์ต (สินค้าหมด)</p>
+            <p class="price">฿12.00</p>
+            <button class="sold-out" disabled><i class="fas fa-times-circle"></i> สินค้าหมด</button>
+        </div>
+        <div class="product-card">
+            <img src="dutchmill_mixed_fruit.jpg" alt="Dutchmill Mixed Fruit">
+            <p>นมดัชมิล รสผลไม้รวม (เตรียมนม)</p>
+            <p class="price">฿15.00</p>
+            <button class="add-to-cart" onclick="addToCart('นมดัชมิล รสผลไม้รวม', 15, 'dutchmill_mixed_fruit.jpg')">
+                <i class="fas fa-cart-plus"></i> เพิ่มลงตะกร้า
+            </button>
+        </div>
+        <div class="product-card sold-out">
+            <img src="dutchmill_orange.jpg" alt="Dutchmill Orange">
+            <p>นมดัชมิล รสส้ม (สินค้าหมด)</p>
+            <p class="price">฿15.00</p>
+            <button class="sold-out" disabled><i class="fas fa-times-circle"></i> สินค้าหมด</button>
+        </div>
+        <div class="product-card">
+            <img src="dutchmill_milk.jpg" alt="Dutchmill Milk">
+            <p>นมดัชมิล นมสด (เตรียมนม)</p>
+            <p class="price">฿10.00</p>
+            <button class="add-to-cart" onclick="addToCart('นมดัชมิล นมสด', 10, 'dutchmill_milk.jpg')">
+                <i class="fas fa-cart-plus"></i> เพิ่มลงตะกร้า
+            </button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h3>Most Popular</h3>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="dutchmill_mixed_fruit.jpg" alt="Popular Dutchmill Mixed Fruit">
+                <p>นมดัชมิล รสผลไม้รวม</p>
+                <p class="price">฿15.00</p>
+                <button class="add-to-cart" onclick="addToCart('นมดัชมิล รสผลไม้รวม', 15, 'dutchmill_mixed_fruit.jpg')">
+                    <i class="fas fa-cart-plus"></i> เพิ่มลงตะกร้า
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="dutchmill_strawberry.jpg" alt="Popular Dutchmill Strawberry">
+                <p>นมดัชมิล รสสตรอเบอร์รี่</p>
+                <p class="price">฿15.00</p>
+                <button class="add-to-cart" onclick="addToCart('นมดัชมิล รสสตรอเบอร์รี่', 15, 'dutchmill_strawberry.jpg')">
+                    <i class="fas fa-cart-plus"></i> เพิ่มลงตะกร้า
+                </button>
+            </div>
+            <div class="product-card">
+                <img src="dutchmill_orange.jpg" alt="Popular Dutchmill Orange">
+                <p>นมดัชมิล รสส้ม</p>
+                <p class="price">฿15.00</p>
+                <button class="sold-out" disabled><i class="fas fa-times-circle"></i> สินค้าหมด</button>
+            </div>
+            <div class="product-card">
+                <img src="dutchmill_milk.jpg" alt="Popular Dutchmill Milk">
+                <p>นมดัชมิล นมสด</p>
+                <p class="price">฿10.00</p>
+                <button class="add-to-cart" onclick="addToCart('นมดัชมิล นมสด', 10, 'dutchmill_milk.jpg')">
+                    <i class="fas fa-cart-plus"></i> เพิ่มลงตะกร้า
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
